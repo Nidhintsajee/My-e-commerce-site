@@ -10,7 +10,7 @@ def list_products(request):
 
 def detail_product(request, pk):
     obj = Product.objects.get(id=pk)
-    print obj
+    print(obj)
     return  render(request,'detail_product.html', {'obj':obj})
 
 def add_product(request):
