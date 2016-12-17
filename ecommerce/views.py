@@ -19,16 +19,16 @@ def add_product(request):
     return render(request, 'ecommerce/add_product.html', context)	
 
 def save_product(request):
-    if request.method == "POST":	
-	form = ProductForm(request.POST, request.FILES)
-	print(form.errors)
-       	if form.is_valid():
-		form.save()
-       		context = {'form':form}
-  		print form.errors
-	       	return render(request, 'ecommerce/save.html', context)
-    else:
-    	form = ProductForm()
-	print(form.errors)
-  	return render(request, 'ecommerce/add_product.html', {'form': form})
+	if request.method == "POST":	
+		form = ProductForm(request.POST, request.FILES)
+		print(form.errors)
+       		if form.is_valid():
+			form.save()
+       			context = {'form':form}
+  			print form.errors
+	       		return render(request, 'ecommerce/save.html', context)
+	else:
+    		form = ProductForm()
+		print(form.errors)
+  		return render(request, 'ecommerce/add_product.html', {'form': form})
 
