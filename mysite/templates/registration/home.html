@@ -1,0 +1,9 @@
+
+{% extends 'ecommerce/home.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <a href="{% url 'login' %}">Login</a> 
+  <a href="{% url 'ecommerce:list_products' %}">See Products</a>
+{% endblock %}
+

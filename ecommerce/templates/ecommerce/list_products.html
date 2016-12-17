@@ -1,0 +1,24 @@
+{% extends 'ecommerce/home.html' %}
+
+    <div>
+{% block content %}
+<nav>
+  <ul>
+    <li><a href="{% url 'login' %}">login</a></li>
+    <li><a href="{% url 'register'%}">SignUp</a></li>
+  </ul>
+</nav>
+
+</div>
+
+    <ul>
+    {% csrf_token %}
+    {% for product in List %}
+       <div>
+	</ul> 
+       <img src= "{{ product.thumbnail.url}}"> 
+	<p> <li><a href="/product/{{product.id}}"> {{ product.title }} </a> </li></p>
+       </div>
+    {% endfor %}
+{% endblock  %}
+
