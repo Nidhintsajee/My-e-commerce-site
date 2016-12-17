@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 import os.path
-import Image
+from PIL import Image
 from cStringIO import StringIO
 from django.core.files.uploadedfile import SimpleUploadedFile
 
